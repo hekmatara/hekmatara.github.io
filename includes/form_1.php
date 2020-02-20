@@ -10,7 +10,7 @@
 	$message = $_POST['message'];
 	$optin = $_POST['optin'];
 	
-	$to = 'kourosh.hekmatara@gmail.com'; // Email submissions are sent to this email
+	$to = 'k@hekmatara.com'; // Email submissions are sent to this email
 
 	// Create email	
 	$email_subject = "Message from a Blocs website.";
