@@ -1,12 +1,11 @@
 <?php	
-	if(empty($_POST['name']) && strlen($_POST['name']) == 0 || empty($_POST['email']) && strlen($_POST['email']) == 0 || empty($_POST['message']) && strlen($_POST['message']) == 0)
+	if(empty($_POST['name']) && strlen($_POST['name']) == 0 || empty($_POST['message']) && strlen($_POST['message']) == 0)
 	{
 		return false;
 	}
 	
 	$name = $_POST['name'];
 	$input_61 = $_POST['input_61'];
-	$email = $_POST['email'];
 	$message = $_POST['message'];
 	$optin = $_POST['optin'];
 	
@@ -15,10 +14,10 @@
 	// Create email	
 	$email_subject = "Message from a Blocs website.";
 	$email_body = "You have received a new message. \n\n".
-				  "Name: $name \nInput_61: $input_61 \nEmail: $email \nMessage: $message \nOptin: $optin \n";
+				  "Name: $name \nInput_61: $input_61 \nMessage: $message \nOptin: $optin \n";
 	$headers = "MIME-Version: 1.0\r\nContent-type: text/plain; charset=UTF-8\r\n";	
 	$headers .= "From: kourosh.hekmatara@gmail.com\n";
-	$headers .= "Reply-To: $email";	
+	$headers .= "Reply-To: DoNotReply@yoursite.com";	
 	
 	mail($to,$email_subject,$email_body,$headers); // Post message
 	return true;			
